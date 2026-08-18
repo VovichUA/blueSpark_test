@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статуси лідів</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="lead.html">Форма ліда</a>
+        <a href="statuses.html" class="active">Статуси лідів</a>
+    </nav>
+
+    <main class="container">
+        <h1>Статуси лідів</h1>
+
+        <form id="filterForm" class="filter-form">
+            <input type="hidden" name="action" value="getstatuses">
+            <div class="form-group">
+                <label for="dateFrom">Дата від</label>
+                <input type="date" id="dateFrom" name="date_from">
+            </div>
+
+            <div class="form-group">
+                <label for="dateTo">Дата до</label>
+                <input type="date" id="dateTo" name="date_to">
+            </div>
+
+            <button type="button" id="filterBtn">Показати</button>
+        </form>
+
+        <div id="tableResult">
+            <table class="leads-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>FTD</th>
+                    </tr>
+                </thead>
+                <tbody id="leadsTableBody">
+                    <tr><td colspan="4">Введіть дати для пошуку</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
